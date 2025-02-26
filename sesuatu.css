@@ -1,0 +1,900 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.header{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url("background.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 300px;
+    z-index: 0;
+}
+@keyframes headerfixed{
+    from {
+        background-color: none;
+    }
+    to {
+        background-color: white;
+    }
+}
+
+.fixedheader{
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    animation: headerfixed linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+}
+
+.fixedheader.fix{
+    padding-bottom: 50px;
+}
+
+.fixedheader.fix a{
+    color: white;
+    filter: none;
+    font-weight: 500;
+}
+
+.fixedheader.fix img{
+    
+}
+
+.headerpos{
+    
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+.header1{
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    box-shadow: 2px black;
+}
+
+.header1things{
+    display: flex;
+    align-items: center;
+}
+
+.notlogin a{
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    filter: drop-shadow(1px 1px 10px black);
+}
+
+.notlogin a:hover{
+    background-color: rgba(0,0,0,0.19);
+}
+
+
+ 
+.logo-start img{
+    width: 150px;
+    margin-left: -2px;
+    margin-right: 150px;
+    filter: brightness(0) invert(1) drop-shadow(1px 1px 15px black);
+}
+
+
+.login {
+    align-items: center;
+}
+
+.login a{
+    margin-left: 4px;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
+
+.login a:hover{
+
+    background-color: rgba(0,0,0,0.3);
+}
+
+.login i{
+    font-size: 14px;
+    transform: translateY(1px);
+    margin-right: 2px;
+}
+
+.register a{
+    padding: 8px 12px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #4DA1FF;
+    border-radius: 5px;
+}
+
+.register a:hover{
+    background-color: #4385d0;
+}
+
+
+.header2{
+    margin-top: -50px;
+}
+
+.header2 a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-left: 30px;
+    font-weight: 500;
+    filter: drop-shadow(1px 1px 5px black);
+}
+
+.slogan{
+    padding-top: 150px;
+    margin-bottom: 40px;
+}
+
+.slogan h1{
+    position: sticky;
+    margin-top: 0px;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    filter: drop-shadow(1px 1px 15px black);
+}
+
+.list {
+    text-align: center;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.list button{
+    position: relative;
+    color: rgba(255, 255, 255,0.7);
+    border: none;
+    background: none;
+    margin: auto;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    filter: drop-shadow(1px 1px 10px black);
+    padding: 8px 22px;
+    border-radius: 40px;
+    border: rgba(0,0,0,0) solid 1px;
+
+}
+
+
+
+.list button.check:hover{
+    position: relative;
+    border: white solid 1px;
+    border-radius: 40px;
+    color: white;
+}
+
+.list button.on{
+    background-color: white;
+    color: black;
+    border-radius: 40px;
+    transition: 0.2s;
+}
+.list button.on i{
+    left: 0;
+    color: var(--accent-color);
+    border-radius: 20px;
+}
+
+.list button.on:hover{
+    color: black;
+}
+
+
+.break{
+    margin-top: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    height: 1px;
+    background: rgba(255,255,255);
+    border-radius: 20px;
+    filter: drop-shadow(1px 1px 15px black);
+
+}
+
+.hotelmenu{
+    
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 140px;
+    margin-right: 140px;
+
+}
+
+.hotelmenu.active{
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
+
+.hotelmenu button{
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none ;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.333);
+    margin-right: 5px;
+}
+
+.hotelmenu button.true{
+    background-color: #298cfe;
+    color: white;
+    transition: 0.2s;
+}
+
+
+.mainsearchhotel{
+    width: 100%;
+    margin-top: 20px;
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+}
+.searchhotel i{
+    margin-top: 15px;
+}
+.searchhotel div{
+    width: 100%;
+}
+
+
+.hoteldestinationinfo{
+    margin-top: 12px;
+    display: flex;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+    border-top: 3px solid darkgray;
+    border-bottom: 3px solid darkgray;
+    border-left: 3px solid darkgray;
+    border-right: 2px solid darkgray;
+    padding: 4px;
+}
+
+.hoteldestinationinfo i{
+    font-size: 22px;
+    transform: translateY(-8px);
+    color: #4DA1FF;
+    padding-left: 10px;
+    padding-right: 8px;
+}
+.hoteldestinationinfo input{
+    width: 330px;
+    border: none;
+}
+
+
+.hoteldateinfo{
+    margin-top: 12px;
+    display: flex;
+    background-color: white;
+    padding: 4px;
+    border-top: 3px solid darkgray;
+    border-bottom: 3px solid darkgray;
+    border-right: 2px solid darkgray;
+}
+
+.hoteldateinfo i{
+    font-size: 22px;
+    transform: translateY(-8px);
+    color: #4DA1FF;
+    padding-left: 10px;
+    padding-right: 8px;
+
+}
+
+.hoteldateinfo input{
+    width: 330px;
+    border: none;
+    font-size: 14px;
+}
+
+.hoteldateinfo input::placeholder{
+    color: black;
+    font-weight: 500;
+}
+
+.hotelguestsinfo{
+    margin-top: 12px;
+    display: flex;
+    background-color: white;
+    padding: 4px;
+    border-top: 3px solid darkgray;
+    border-bottom: 3px solid darkgray;
+    
+    
+}
+.hotelguestsinfo i{
+    font-size: 22px;
+    transform: translateY(-8px);
+    color: #4DA1FF;
+    padding-left: 10px;
+    padding-right: 8px;
+}
+.hotelguestsinfo input{
+    width: 330px;
+    border: none;
+    font-size: 14px;
+}
+
+.hotelguestsinfo input::placeholder{
+    color: black;
+    font-weight: 500;
+}
+
+
+.hotelsearchicon{
+    margin-top: 28px;
+}
+
+.hotelsearchicon a{
+    padding: 6px 10px 5.5px 8px;
+    background-color: #f39c12;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 0px 15px 15px 0px;
+    color: white;
+    border-top: 3px solid darkgray;
+    border-bottom: 3px solid darkgray;
+    border-right: 3px solid darkgray;
+}
+
+.hotelsearchicon i{
+    transform: translateY(2px);
+}
+
+
+
+.flightmenu{
+    margin-top: 30px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 140px;
+    margin-right: 140px;
+}
+.flightmenu.active{
+    
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
+
+.topflightmenu{
+    position: absolute;
+    display: flex;
+    width: 1150px;
+    justify-content: space-between;
+}
+.leftflight button{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.333);
+    border: none;
+    cursor: pointer;
+}
+
+.leftflight button.flight{
+    background-color: #298cfe;
+    transition: 0.2s;
+}
+
+.rightflight{
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.flightguest{
+    margin-right: 8px;
+}
+
+.flightguest button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flightguest button i{
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transform: translateY(2.5px);
+}
+
+.flightguest button{
+    width: 350px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.flightclass select{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 7.5px 10px;
+    border-radius: 6px;
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.mainflightschedule{
+    width: 1150px;
+    margin-top:60px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.flightfromto{
+    display: flex;
+    font-size: 13px;
+}
+
+.flightfrominfo{
+    margin-top: 15px;
+    display: flex;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+    border-top: 3px solid darkgray;
+    border-bottom: 3px solid darkgray;
+    border-left: 3px solid darkgray;
+    border-right: 2px solid darkgray;
+    padding: 10px;
+}
+.flightfromto i{
+    font-size: 24px;
+    color: #4DA1FF;
+    padding-left: 5px;
+    padding-right: 8px;
+    transform: translateY(-1px);
+}
+
+.flightfrominfo input{
+    width: 200px;
+    border: none;
+    font-size: 14px;
+}
+
+.flightfrominfo input::placeholder{
+    color: black;
+    font-weight: 500;
+}
+
+.flighttoinfo{
+    background-color: white;
+    margin-top: 15px;
+    display: flex;
+    background-color: white;
+    border-radius: 0px 15px 15px 0px;
+    border-top: 3px solid darkgray;
+    border-bottom: 3px solid darkgray;
+    border-right: 3px solid darkgray;
+    padding: 10px;
+}
+.flighttomto i{
+    font-size: 24px;
+    color: #4DA1FF;
+    padding-right: 8px;
+}
+
+.flighttoinfo input{
+    width: 200px;
+    border: none;
+    font-size: 14px;
+}
+
+.flighttoinfo input::placeholder{
+    color: black;
+    font-weight: 500;
+}
+
+.flightdeparturedate{
+    display: flex;
+    font-size: 13px;
+}
+
+
+
+.departuredateinfo{
+    margin-top: 15px;
+    display: flex;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+    border-top: 3px solid darkgray;
+    border-bottom: 3px solid darkgray;
+    border-left: 3px solid darkgray;
+    border-right: 2px solid darkgray;
+    padding: 10px;
+} 
+
+.departuredateinfo i{
+    font-size: 24px;
+    color: #4DA1FF;
+    padding-left: 5px;
+    padding-right: 8px;
+    transform: translateY(-1px);
+}
+
+.departuredateinfo button{
+    width: 200px;
+    border: none;
+    background: none;
+    text-align: left;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.returndatecheck{
+    display: flex;
+}
+
+.returndatecheck input{
+    margin-right: 10px;
+}
+
+.returndateinfo{
+    background-color: white;
+    margin-top: 15px;
+    display: flex;
+    background-color: white;
+    border-radius: 0px 15px 15px 0px;
+    border-top: 3px solid darkgray;
+    border-bottom: 3px solid darkgray;
+    border-right: 3px solid darkgray;
+    padding: 10px;
+} 
+
+.returndateinfo i{
+    font-size: 24px;
+    color: grey;
+    padding-left: 5px;
+    padding-right: 8px;
+    transform: translateY(-1px);
+}
+
+.returndateinfo button{
+    width: 200px;
+    border: none;
+    background: none;
+    text-align: left;
+    color: grey;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.flightsearchicon{
+    transform: translateY(28px);
+
+}
+.flightsearchicon i{
+    text-decoration: none;
+    transform: translateY(5px);
+    color: white;
+    font-size: 24px;
+    padding: 10px 14px;
+    background-color: #f39c12;
+    border: 3px solid darkgray;
+    border-radius: 15px;
+}
+
+.flightsearchicon i:hover{
+    background-color: #e89614;
+}
+
+.moremenu{
+    opacity: 0;
+    visibility: hidden;
+    top: 25%;
+    left: 20%;
+    right: 20%;
+    position: fixed;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border:solid 2px white;
+    filter: drop-shadow(1px 1px 10px black);
+    transition: 0.2s ease-in;
+}
+
+.moremenu.active{
+    visibility: visible;
+    opacity: 1;
+    top: 25%;
+    left: 20%;
+    right: 20%;
+    position: fixed;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border:solid 2px white;
+    filter: drop-shadow(1px 1px 10px black);
+    z-index: 999;
+    transition: 0.2s ease-in;
+}
+
+.morecancel{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    top: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.moreinfo{
+    
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+
+
+.coupon-section{
+    background: linear-gradient(135deg,#85c1e9,#f4f6f6,#d5f5e3);    
+}
+
+.coupon{
+    padding-top: 20px;
+    margin-left: 110px;
+    margin-right: 110px;
+    padding-bottom: 40px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title i{
+    font-size: 26px;
+    transform: translateY(2px);
+}
+
+.leftcoupontitle{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.leftcoupontitle i{
+    font-size:28px;
+    margin-right: 12px;
+    transform: translateY(-2px);
+}
+
+.couponmore a{
+    text-decoration: none;
+    color: black;
+}
+
+.couponlist{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.couponnamelist{
+    width: 315px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.titlecoupon {
+    display: flex;
+    padding: 10px;
+}
+
+.couponimage{
+    color: white;
+    font-size: 20px;
+    padding: 4px 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    margin-right: 10px;
+    
+}
+
+.couponimage i{
+    transform: translateY(2px);
+}
+
+.couponname-caption h6{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.couponname-caption p{
+    font-size: 10px;
+    font-weight: 400;
+    transform: translateY(1px);
+}
+
+.copied-text{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: flex;
+    text-align: center;
+}
+
+.textcopied{
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+
+.textcopied i{
+    padding: 5px;
+    color: grey;
+    margin-left: 3px;
+    margin-right: 2px;
+}
+
+.textcopied p{
+    width: 210px;
+    text-align: left;
+    border: none;
+    font-size: 12px;
+    color: grey;
+    font-weight: 500;
+}
+
+.copied-text button{
+    background: #aed6f1;
+    border: none;
+    color: black;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius:20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.copied-text button:hover{
+    background-color: #75bded;
+    color: white;
+    transition: 0.3s;
+}
+
+.copypopupsection{
+    right: 0;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    visibility: visible;
+    transform: translateY(100%);
+    opacity: 0;
+    
+    transition: 0.5s ease-in;
+}
+
+.copypopupsection.pop{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 0.5s ease-out;
+}
+
+.copy-popup{
+    background-color: #4385d0;
+    display: flex;
+    padding: 5px 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    filter: drop-shadow(1px 1px 25px rgba(0, 0, 0, 0.347));
+}
+
+.poptext{
+    color: white;
+    margin-left: 20px;
+}
+
+.poptexticon{
+    color: white;
+    font-size: 26px;
+    margin-right: 20px;
+}
+
+.enchancetitle{
+    font-size: 14px;
+    color: rgb(53, 53, 53);
+}
+
+.enchancetripmenu{
+    padding-top: 20px;
+    margin-left: 110px;
+    margin-right: 110px;
+    padding-bottom: 40px;
+}
+
+.enchancetripmenu img{
+    width: 237px;
+    height: 140px;
+}
+
+.triplists{
+    display: flex;
+    justify-content: center;
+}
+
+.tripinformation{
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    border-radius: 8px 8px 8px 8px;
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.347));
+}
+
+.tripimage img{
+    border-radius: 8px 8px 0 0;
+}
+
+.triptitle h5{
+    padding: 4px 10px 10px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(87, 87, 87);
+}

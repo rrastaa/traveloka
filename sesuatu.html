@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sesuatu.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    
+        <div class="fixedheader fix">
+
+            <div class="headerpos">
+                <div class="header1">
+                    <div class="logo-start">
+                        <img src="traveloka.png" alt="logo">
+                    </div>
+                    <div class="header1things">
+                        <div class="notlogin">
+                            <a href="">EN | IDR<i class='bx bx-chevron-down'></i></a>
+                            <a href="">Deals</a>
+                            <a href="">Support<i class='bx bx-chevron-down'></i></a>
+                            <a href="">Partnership</a>
+                            <a href="">For Corporates</a>
+                            <a href="">Bookings</a>
+                        </div>
+                        
+                        <div class="login">
+                            <a href=""><i class='bx bxs-user' ></i> Log In</a>
+                        </div>
+                        <div class="register">
+                            <a href="">Register</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="header2">
+                    <a href="">Hotels</a>
+                    <a href="">Flights</a>
+                    <a href="">Trains</a>
+                    <a href="">Bus & Travel</a>
+                    <a href="">Airport Transfer</a>
+                    <a href="">Car Rental</a>
+                    <a href="">Things to Do</a>
+                    <a href="">More <i class='bx bx-chevron-down'></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header">
+        <div class="slogan">
+            <h1>From Southeast Asia to the World, All Yours.</h1>
+        </div>
+
+        <div class="list">
+            <button class="hotelchecklist check on" style="--accent-color: #242b69">
+                <i class='bx bxs-building-house' ></i>
+                <span>Hotels</span>
+            </button>
+            <button class="check flightchecklist" style="--accent-color: #4DA1FF">
+                <i class='bx bxs-plane-alt' ></i>
+                <span>Flights</span>
+            </button>
+            <button class="check" style="--accent-color: #dc7633">
+                <i class='bx bxs-train' ></i>
+                <span>Trains</span>
+            </button>
+            <button class="check" style="--accent-color: #52be80">
+                <i class='bx bxs-bus' ></i>
+                <span>Bus & Travel</span>
+            </button>
+            <button class="check" style="--accent-color: #abebc6">
+                <i class='bx bxs-plane-land' ></i>
+                <span>Airport Transfer</span>
+            </button>
+            <button class="check" style="--accent-color: #117a65">
+                <i class='bx bxs-taxi' ></i>
+                <span>Car Rental</span>
+            </button>
+            <button class="check" style="--accent-color: #d35400">
+                <i class='bx bx-spreadsheet' ></i>
+                <span>Things to Do</span>
+            </button>
+            <button onclick=moreInfo() class="check moreinfo" style="--accent-color: none">
+                <i class='bx bxs-grid' ></i>
+                <span>More</span>
+            </button>
+        </div>
+
+        <div class="break"></div>
+
+        <div class="hotelmenu active">
+            <button class="hotelmenucheck true">
+                <i class='bx bxs-building-house' ></i>
+                <span>Hotels</span>
+            </button>
+            <button class="hotelmenucheck">
+                <i class='bx bxs-building-house' ></i>
+                <span>Villa</span>
+            </button>
+            <button class="hotelmenucheck">
+                <i class='bx bxs-building-house' ></i>
+                <span>Apartments</span>
+            </button>
+
+            <div class="searchhotel">
+                <div class="mainsearchhotel">
+                    <div class="hoteldestination">
+                        <p>City, destination, or hotel name</p>
+                        <div class="hoteldestinationinfo">
+                            <i class='bx bx-map' ></i>
+                            <input type="text" placeholder="City, hotel, place to go">
+                        </div>
+                    </div>
+                    <div class="hoteldate">
+                        <p>Check-in & Check-out Dates</p>
+                        <div class="hoteldateinfo">
+                            <i class='bx bx-calendar' ></i>
+                            <input type="text" placeholder="15 Jan 2025">
+                        </div>
+                    </div>
+                    <div class="hotelguests">
+                        <p>Guests and Rooms</p>
+                        <div class="hotelguestsinfo">
+                            <i class='bx bxs-user-detail' ></i>
+                            <input type="text" placeholder="1 Adult(s), 0 Child, 1 Room">
+                        </div>
+                    </div>
+                    <div class="hotelsearchicon">
+                        <a href=""> <i class='bx bx-search' ></i></a>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+
+        <div class="flightmenu">
+            <div class="topflightmenu">
+                <div class="leftflight">
+                    <button class="triptype flight">
+                        <span>One-way / Round-trip</span>
+                    </button>
+                    <button class="triptype">
+                        <span>Multi-city</span>
+                    </button>
+                </div>
+                <div class="rightflight">
+                    <div class="flightguest">
+                        <button class="flightguests">
+                            <div class="flightguestleft">
+                                <i class='bx bxs-user-detail' ></i>
+                                <span>1 Adult, 0 Child, 0 Infant (on lap)</span>
+                            </div>
+                            <div class="flightguestright">
+                                <i class='bx bx-chevron-down'></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="flightclass">
+                        <select name="flightclass" class="selectclass" id="flightclass">
+                            <option value="economy">Economy</option>
+                            <option value="premium-economy">Premium Economy</option>
+                            <option value="business">Business</option>
+                            <option value="first-class">First Class</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flightschedule">
+                <div class="mainflightschedule">
+                    <div class="flightfromto">
+                        <div class="flightfrom">
+                            <p>From</p>
+                            <div class="flightfrominfo">
+                                <i class='bx bxs-plane-take-off' ></i>
+                                <input type="text" placeholder="Jakarta (JKTA)">
+                            </div>
+                        </div>
+                        <div class="flightto">
+                            <p>To </p>
+                            <div class="flighttoinfo">
+                                <i class='bx bxs-plane-land' ></i>
+                                <input type="text" placeholder="Bali / Denpasar (DPS)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flightdeparturedate">
+                        <div class="departuredate">
+                            <p>Departure Date</p>
+                            <div class="departuredateinfo">
+                                <i class='bx bx-calendar' ></i>
+                                <button class="departurebutton">15 Jan 2025</button>
+                            </div>
+                        </div>
+                        <div class="returndate">
+                            <div class="returndatecheck">
+                                <input type="checkbox">
+                                <p>Return Date</p>
+                            </div>
+                            <div class="returndateinfo">
+                                <i class='bx bx-calendar' ></i>
+                                <button class="departurebutton">17 Jan 2025</button>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="flightsearchicon">
+                        <a href=""><i class='bx bx-search' ></i></a>
+                    </div>
+
+                </div>
+            </div>
+            
+
+        
+        </div>
+
+        <div class="moremenu">
+            <div onclick=moreCancel() class="morecancel">
+                <i class='bx bx-x-circle' ></i>
+            </div>
+            <div class="moreinfo">
+                <h2>There is nothing bro..</h2>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="coupon-section">
+        <div class="coupon">
+            <div class="title">
+                <div class="leftcoupontitle">
+                    <i class='bx bxs-gift' ></i>
+                    <h3>Daftar untuk Menggunakan Kupon</h3>
+                </div>
+                <div class="couponmore">
+                    <a href="https://apps.apple.com/us/app/traveloka-book-hotel-flight/id898244857?mt=8" target="_blank"><i class='bx bx-chevron-right' ></i></a>
+                </div>
+            </div>
+            <div class="couponbar">
+                <div class="couponlist">
+                    <div class="couponnamelist">
+                        <div class="titlecoupon">
+                            <div class="couponimage" style="--accent-color: #242b69">
+                                <i class='bx bxs-building-house' ></i>
+                            </div>
+                            <div class="couponname-caption">
+                                <h6>Kupon Diskon s.d Rp300rb</h6>
+                                <p>Berlaku untuk Pengguna Baru.</p>
+                            </div>
+                        </div>
+                        <div class="copied-text">
+                            <div class="textcopied">
+                                <i class='bx bxs-copy-alt' ></i>
+                                <div class="test">
+                                    <p class="copiedcoupon1">PARTYTONIGHT</p>
+                                </div>
+                    
+                            </div>
+                            <div onclick=copyCoupon1() class="copybutton">
+                                <button id="coupon1copy">
+                                    Copy 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="couponnamelist">
+                        <div class="titlecoupon">
+                            <div class="couponimage" style="--accent-color: #3498db">
+                                <i class='bx bxs-plane-alt' ></i>
+                            </div>
+                            <div class="couponname-caption">
+                                <h6>Diskon Penerbangan 15%</h6>
+                                <p>min. transaksi Rp300rb</p>
+                            </div>
+                        </div>
+                        <div class="copied-text">
+                            <div class="textcopied">
+                                <i class='bx bxs-copy-alt' ></i>
+                                <p class="copiedcoupon2"> FREEBIRD</p>
+                            </div>
+                            <div onclick=copyCoupon2() class="copybutton">
+                                <button>
+                                    Copy 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="couponnamelist">
+                        <div class="titlecoupon">
+                            <div class="couponimage" style="--accent-color: #dc7633">
+                                <i class='bx bxs-train' ></i>
+                            </div>
+                            <div class="couponname-caption">
+                                <h6>Diskon Kereta 10%</h6>
+                                <p>min. transaksi Rp500rb</p>
+                            </div>
+                        </div>
+                        <div class="copied-text">
+                            <div class="textcopied">
+                                <i class='bx bxs-copy-alt' ></i>
+                                <p class="copiedcoupon3">TRAINTOBUSAN</p>
+                            </div>
+                            <div onclick=copyCoupon3() class="copybutton">
+                                <button>
+                                    Copy 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="copypopupsection">
+            <div class="copy-popup">
+                <div class="poptext">
+                    <p>Link has been successfully copied! </p>
+                </div>
+                <div class="poptexticon">
+                    <i class='bx bx-check-double' ></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="enchancetrip">
+        <div class="enchancetripmenu">
+            <div class="enchancetitle">
+                <h3>Enhance your trip the way you like it</h3>
+            </div>
+            <div class="tripmenu">
+                <div class="triplists">
+                    <div class="tripinformation">
+                        <div class="tripimage">
+                            <img src="cruise.jpg" alt="">
+                        </div>
+                        <div class="triptitle">
+                            <h5>Cruise</h5>
+                        </div>
+                    </div>
+
+                    <div class="triplists">
+                        <div class="tripinformation">
+                            <div class="tripimage">
+                                <img src="kayak.jpg" alt="">
+                            </div>
+                            <div class="triptitle">
+                                <h5>Fun Activities</h5>
+                            </div>
+                        </div>
+
+                        <div class="triplists">
+                            <div class="tripinformation">
+                                <div class="tripimage">
+                                    <img src="travelinsurance.jpg" alt="">
+                                </div>
+                                <div class="triptitle">
+                                    <h5>Travel Insurances</h5>
+                                </div>
+                            </div>
+
+                        <div class="triplists">
+                            <div class="tripinformation">
+                                <div class="tripimage">
+                                <img src="tpaylater.jpg" alt="">
+                                </div>
+                            <div class="triptitle">
+                                <h5>TPayLater</h5>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script src="sesuatu.js"></script>
+</html>
